@@ -1,0 +1,9 @@
+{
+  "name": "synthetic-ci-smoke",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": { "node": "24.22.0" },
+  "scripts": { "test": "node --test" }
+}
