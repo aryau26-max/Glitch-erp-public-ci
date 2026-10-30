@@ -17,12 +17,23 @@ verified release commit hashes. It has read-only repository permissions, no
 stored credentials, no artifact upload, no dependency cache, and no paid runner.
 GitHub infrastructure and runtime downloads are still external dependencies.
 
-This is a LOCAL STAGING PROPOSAL, not authorization to publish. Before publication,
-the owner must review every file, approve the public scope and licensing, and
-separately authorize an empty public repository and new history. The package is
-private and unlicensed to avoid implying npm publication or a license grant.
+This repository is already public. Review future changes before publishing.
+The package is marked private and unlicensed to avoid npm publication or an
+implied license grant.
 
 Public standard runners are generally free, but an account restriction may still
 prevent execution. A separately authorized public smoke run must establish actual
 account feasibility. Never interpret blocked CI as passing or buy services to
 work around it.
+
+## Private/public CI boundary
+
+The main Glitch ERP repository remains private. This public repository runs
+independent synthetic tests only. Never mirror private source or Git history,
+retrieve private build artifacts, copy ERP logs or data, or put private
+credentials or privileged cross-repository tokens in public workflows.
+
+A green public smoke run validates only the public runner and synthetic tests.
+It does not validate the ERP build, database migrations, authorization, API,
+Playwright regressions, PR #98, or deployment readiness. Those require separate
+approved private CI or disposable local validation.
